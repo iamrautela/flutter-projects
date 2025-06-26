@@ -1,9 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:expense_tracker_dart/expenses.dart';
+import 'splash_screen.dart';
+
 void main() {
-  runApp(
-    const MaterialApp(
-    home: Expenses(),
-  ),
-  );
+  runApp(ExpenseApp());
+}
+
+class ExpenseApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Expense Tracker',
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(primarySwatch: Colors.teal),
+      home: SplashScreen(),
+    );
+  }
 }
